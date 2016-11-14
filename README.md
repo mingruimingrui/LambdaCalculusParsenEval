@@ -8,7 +8,7 @@
  access the parsing library, please download the JAR file from
  
  http://central.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.2/
- > scala-parser-combinators_2.11-1.0.2.jar
+ titled scala-parser-combinators_2.11-1.0.2.jar
  
  
  
