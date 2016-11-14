@@ -135,52 +135,6 @@ object Lab4 extends App with RegexParsers{
     case None    => println("Hmmm I don't think that this is a lambda term.")
   }
 
-  //def test1: LambdaParser
-
-  //import Parsing._
-  println("\n\n\nWelcome to Lab4 on Parsing Lambda Calculus")
-
-  print("\n\\x.x             will be parsed as: ")
-  print_lambda("\\x.x")
-
-  print("\n(\\x.x y) z       will be parsed as: ")
-  print_lambda("(\\x.x y) z")
-
-  print("\nxy               will be parsed as: ")
-  print_lambda("xy")
-
-  print("\n\\xy.x yz         will be parsed as: ")
-  print_lambda("\\x y. x y z")
-
-  print("\n\\x.x \\x.x        will be parsed as: ")
-  print_lambda("\\x.x \\x.x")
-  
-  print("\nlet x = y in x   will be parsed as: ")
-  print_lambda("let x = y in x")
-
-  println("\n\n\neven complex ones will be parsed:")
-
-  println("\n(((\\ x y.(y x))(((((\\ x y. (y x))(((\\ x.x) z)))) (\\ x.x))))(\\ x.x))   will be:")
-  print_lambda("(((\\ x y.(y x))(((((\\ x y. (y x))(((\\ x.x) z)))) (\\ x.x))))(\\ x.x))")
-
-  println("\nnot a lambda term    will be:")
-  print_lambda("not a lambda term")
-
-  println("\n\n\nhowever error occurs if we do not recognise a lambda term")
-
-  println("\n(\\x. x x   will be parsed as:")
-  print_lambda("(\\x. x x")
-
-  println("\n?not a lambda term is: ")
-  print_lambda("?not a lambda term")
-  
-  println("\n\n\nReason for changing free_vars method")
-  println("please test this out by chaning the code as according")
-  println(free_vars(Lab4.parseAll(term,"\\x.x").get))
-  println(free_vars(Lab4.parseAll(term,"\\x y.x y").get))
-  
-  println("\n\n")
-
 }
 
 
